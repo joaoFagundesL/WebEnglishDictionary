@@ -57,11 +57,6 @@ async function getData(search) { /* Preparing the api */
 	const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}` /* Url with the word desired */
 	const response = await fetch(apiUrl); /* Fetching api */
 
-	if(response.status != 200) {
-		alert('API is broken. Server fault. Try again later');
-		return;
-	}
-
 	const data = await response.json(); // Getting all information
 
 	return data;
